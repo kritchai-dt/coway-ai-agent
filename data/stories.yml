@@ -1,0 +1,14 @@
+version: "3.1"
+
+stories:
+- story: เส้นทางแนะนำสินค้า Coway
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_product
+    - action: utter_ask_product
+    - intent: ask_price_package
+    - action: action_recommend_package
+    - intent: confirm_purchase
+    - action: utter_ask_contact_info
+    - intent: provide_contact_info

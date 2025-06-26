@@ -1,0 +1,35 @@
+version: "3.1"
+
+intents:
+  - greet
+  - ask_product
+  - ask_price_package
+  - confirm_purchase
+  - provide_contact_info
+
+entities:
+  - product_type
+
+slots:
+  product_type:
+    type: text
+    influence_conversation: true
+  name:
+    type: text
+  phone:
+    type: text
+  address:
+    type: text
+
+responses:
+  utter_greet:
+    - text: "สวัสดีค่ะ 😊 ยินดีต้อนรับสู่ Coway ค่ะ"
+
+  utter_ask_product:
+    - text: "คุณสนใจสินค้าแบบไหนคะ? เช่น เครื่องกรองน้ำ เครื่องฟอกอากาศ เก้าอี้นวด ฯลฯ"
+
+  utter_ask_contact_info:
+    - text: "กรุณาระบุชื่อ เบอร์โทร และที่อยู่ของคุณค่ะ"
+
+actions:
+  - action_recommend_package
